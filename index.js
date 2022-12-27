@@ -16,7 +16,7 @@ figlet("goated", async (err, data) => {
   if (!fs.existsSync(templatesPath)) {
     try {
       fs.mkdirSync(`${os.homedir()}/goated.js`);
-			fs.mkdir(templatesPath);
+      fs.mkdir(templatesPath);
 
       return console.log("You have no templates to clone!");
     } catch (err) {
@@ -27,8 +27,6 @@ figlet("goated", async (err, data) => {
   }
 
   const templates = fs.readdirSync(templatesPath);
-
-	console.log(templates);
 
   if (!templates.length) return console.log("You have no templates to clone!");
 
